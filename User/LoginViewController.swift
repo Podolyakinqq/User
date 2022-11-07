@@ -37,5 +37,10 @@ class LoginViewContoller: UIViewController {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.username = loginTextField.text ?? ""
     }
+    
+    @IBAction func unwindToLogin(_ unwindSegue: UIStoryboardSegue) {
+        passwordTextField.text = ""
+        loginTextField.text = ""
+    }
 }
 

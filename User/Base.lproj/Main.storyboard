@@ -88,7 +88,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOv-yX-MLs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOv-yX-MLs">
                                 <rect key="frame" x="87" y="167" width="216" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="M19-Om-AAo"/>
@@ -97,6 +97,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNk-bt-hsh">
+                                <rect key="frame" x="150" y="407" width="76" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <segue destination="y5N-Ih-6Wf" kind="unwind" unwindAction="unwindToLogin:" id="afD-qj-zew"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rAS-Bn-B0P"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -104,6 +112,9 @@
                             <constraint firstItem="rAS-Bn-B0P" firstAttribute="trailing" secondItem="YOv-yX-MLs" secondAttribute="trailing" constant="87" id="9AQ-XL-oES"/>
                             <constraint firstItem="YOv-yX-MLs" firstAttribute="leading" secondItem="rAS-Bn-B0P" secondAttribute="leading" constant="87" id="F1d-ZG-4Hp"/>
                             <constraint firstItem="YOv-yX-MLs" firstAttribute="top" secondItem="rAS-Bn-B0P" secondAttribute="top" constant="120" id="YYl-o6-r2I"/>
+                            <constraint firstItem="PNk-bt-hsh" firstAttribute="top" secondItem="YOv-yX-MLs" secondAttribute="bottom" constant="130" id="bbN-YL-KSu"/>
+                            <constraint firstItem="rAS-Bn-B0P" firstAttribute="trailing" secondItem="PNk-bt-hsh" secondAttribute="trailing" constant="157" id="g1P-Ah-pg1"/>
+                            <constraint firstItem="PNk-bt-hsh" firstAttribute="leading" secondItem="rAS-Bn-B0P" secondAttribute="leading" constant="157" id="vl0-wb-vFP"/>
                         </constraints>
                     </view>
                     <connections>
@@ -111,6 +122,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ce-bW-VmL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="y5N-Ih-6Wf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="761.53846153846155" y="3.5545023696682461"/>
         </scene>
